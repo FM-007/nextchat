@@ -1,5 +1,4 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,16 +13,13 @@ const Home = () => {
 					</p>
 				</div>
 				<h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
-					Converse com seus <span className="text-blue-600">documentos</span> em segundos.
+					Converse com seus <span className="text-secondary">documentos</span> em segundos.
 				</h1>
 				<p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
-					NextChat possibilita que você converse com qualquer documento PDF.
+					NextChat possibilita que você converse com qualquer documento <span className="text-secondary">PDF</span>.
 					Faça o upload do seu arquivoe comece a fazer perguntas em seguida.
 				</p>
-				<Link className={buttonVariants({
-					size: "lg",
-					className: "mt-5"
-				})} href="/dashboard" target="_blank">
+				<Link className="btn btn-neutral mt-5" href="/dashboard" target="_blank">
 					Iniciar <ArrowRight className="ml-2 h-5 w-5" />
 				</Link>
 			</MaxWidthWrapper>
@@ -56,7 +52,7 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					<div className='mx-auto mb-32 mt-32 max-w-5xl sm:mt-56'>
+					<div className='mx-auto mb-32 mt-32 max-w-5xl sm:mt-56 px-6'>
 						<div className='mb-12 px-6 lg:px-8'>
 							<div className='mx-auto max-w-2xl sm:text-center'>
 								<h2 className='mt-2 font-bold text-4xl text-gray-900 sm:text-5xl'>
@@ -72,7 +68,7 @@ const Home = () => {
 						<ol className='my-8 space-y-4 pt-8 md:flex md:space-x-12 md:space-y-0'>
 							<li className='md:flex-1'>
 								<div className='flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4'>
-									<span className='text-sm font-medium text-blue-600'>
+									<span className='text-sm font-medium text-secondary'>
 										Etapa 1
 									</span>
 									<span className='text-xl font-semibold'>
@@ -83,7 +79,7 @@ const Home = () => {
 										escolha o nosso{' '}
 										<Link
 											href='/pricing'
-											className='text-blue-700 underline underline-offset-2'>
+											className='text-secondary underline underline-offset-2'>
 											pro plan
 										</Link>
 										.
@@ -92,7 +88,7 @@ const Home = () => {
 							</li>
 							<li className='md:flex-1'>
 								<div className='flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4'>
-									<span className='text-sm font-medium text-blue-600'>
+									<span className='text-sm font-medium text-secondary'>
 										Etapa 2
 									</span>
 									<span className='text-xl font-semibold'>
@@ -106,7 +102,7 @@ const Home = () => {
 							</li>
 							<li className='md:flex-1'>
 								<div className='flex flex-col space-y-2 border-l-4 border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4'>
-									<span className='text-sm font-medium text-blue-600'>
+									<span className='text-sm font-medium text-secondary'>
 										Etapa 3
 									</span>
 									<span className='text-xl font-semibold'>

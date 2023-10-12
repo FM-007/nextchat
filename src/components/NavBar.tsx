@@ -5,42 +5,23 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import { buttonVariants } from "./ui/button";
 
 const Navbar = () => {
-	return (
-		<nav
-			className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
-			<MaxWidthWrapper>
-				<div
-					className="flex h-14 items-center justify-between border-b border-zinc-200">
-					<Link
-						href="/"
-						className="flex z-40 font-semibold">
-						<span>NexChat</span>
-					</Link>
-					<div className="hidden items-center space-x-4 sm:flex">
-						<>
-							<Link
-								href="/pricing"
-								className={buttonVariants({
-									variant: "ghost",
-									size: "sm"
-								})}>Preço</Link>
-							<LoginLink
-								className={buttonVariants({
-									variant: "ghost",
-									size: "sm"
-								})}
-							>Entrar</LoginLink>
-							<RegisterLink
-								className={buttonVariants({
-									size: "sm"
-								})}
-							>Registrar <ArrowRight className="ml-2 h-5 w-5" /></RegisterLink>
-						</>
-					</div>
-				</div>
-			</MaxWidthWrapper>
-		</nav>
-	)
+  return (
+    <nav className="navbar bg-secondary">
+      <div className="flex-1">
+        <a href="/" className="btn btn-ghost normal-case text-xl">NextChat</a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-20 flex items-center">
+          <li><Link href="/pricing" className="btn btn-ghost btn-sm mr-4">Preço</Link></li>
+          <li><LoginLink className="btn btn-ghost btn-sm mr-4">Entrar</LoginLink></li>
+          <li><RegisterLink className="btn btn-sm btn-neutral flex-1">
+            <span>Registrar</span>
+          </RegisterLink></li>
+          <li className=""></li>
+        </ul>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar
